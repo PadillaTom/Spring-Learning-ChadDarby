@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="com.luv2code.springdemo.Coach"/>
     <fullyQualifiedTypeName name="com.luv2code.springdemo.BaseballCoach"/>
     <fullyQualifiedTypeName name="com.luv2code.springdemo.TrackCoach"/>
     <fullyQualifiedTypeName name="com.luv2code.springdemo.FortuneService"/>
-    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
     <fullyQualifiedTypeName name="com.luv2code.springdemo.CricketCoach"/>
+    <fullyQualifiedTypeName name="com.luv2code.springdemo.Coach"/>
+    <fullyQualifiedTypeName name="com.sun.tools.javac.util.Context"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="com.luve2code.springdemo.Coach"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.luve2code.springdemo.FortuneService"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 </qualifiedTypeNameHistroy>

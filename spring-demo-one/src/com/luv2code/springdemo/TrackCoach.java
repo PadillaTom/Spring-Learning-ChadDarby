@@ -19,5 +19,13 @@ public class TrackCoach implements Coach {
 		// TODO Auto-generated method stub
 		return "overriding wohooo " + fortuneService.getFortune();
 	}
+	
+	//*** Methods for Beans LIFECYCLE ****
+	public void doMyInitStuff(){
+		System.out.println("TRACKCOACH --- Doing INIT Stuff");
+	}	
+	public void doMyDestroyStuff() {
+		System.out.println("TRACKCOACH --- Doing DESTROY Stuff");
+	}
 
 }
