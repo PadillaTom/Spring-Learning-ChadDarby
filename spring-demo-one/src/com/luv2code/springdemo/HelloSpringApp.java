@@ -13,6 +13,8 @@ public class HelloSpringApp {
 		
 		// Call Methods of the Bean
 		System.out.println(firstCoach.getDailyWorkout());
+		// By using dependency injection my firstCoach can access getDailyFortune
+		System.out.println(firstCoach.getDailyFortune());
 		
 		// Close Context
 		context.close();

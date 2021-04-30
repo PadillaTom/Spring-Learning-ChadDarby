@@ -1,0 +1,21 @@
+package com.luv2code.springdemo;
+
+public class CricketCoach implements Coach {
+
+	private FortuneService fortuneService;
+	public public CricketCoach() {
+		System.out.println("Inside EMPTY constructor");
+	}
+	
+
+	@Override
+	public String getDailyWorkout() {
+		return "Overriding from CRICKET COACH";
+	}
+
+	@Override
+	public String getDailyFortune() {
+		return "Cricket Coach says: " + fortuneService.getFortune();
+	}
+
+}
