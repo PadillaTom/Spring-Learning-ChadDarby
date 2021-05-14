@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
+
 /**
  * Servlet implementation class TestDbServlet
  */
@@ -20,28 +21,33 @@ public class TestDbServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		
-		// *** Setup Connection Variables ***
+	
+		// *** Setup Connection Variables
 		String user = "springstudent";
 		String pass = "springstudent";
 		
 		String jdbcUrl = "jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false&serverTimezone=UTC";
 		String driver = "com.mysql.cj.jdbc.Driver";
 		
-		// *** Get Connection to DB ***
+		
+		// *** Get Connection to DB
+		
 		try {
 			PrintWriter out = response.getWriter();
-			out.println("Connecting to database: " + jdbcUrl);
+			out.println("Connecting to DB: " + jdbcUrl);
+			
 			Class.forName(driver);
+			
 			Connection myConn = DriverManager.getConnection(jdbcUrl, user, pass);
-			out.println("You are Connected!!!");
+			
+			out.println("Connected OK !!!");
+			
 			myConn.close();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new ServletException(e);
 		}
-		
 		
 	}
 
