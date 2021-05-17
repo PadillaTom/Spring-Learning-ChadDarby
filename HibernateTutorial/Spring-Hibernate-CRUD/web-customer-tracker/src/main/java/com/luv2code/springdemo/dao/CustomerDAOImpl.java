@@ -15,26 +15,36 @@ import com.luv2code.springdemo.entity.Customer;
 @Repository
 public class CustomerDAOImpl implements CustomerDAO {
 
-	//**** Implement Annotations ****
-	
 	@Autowired
 	private SessionFactory sessionFactory;
 	
+	
+	//*** Get ALL Customers ***
 	@Override
 	public List<Customer> getCustomers() {
 		
 		// Get Current Hibernate Session:
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		// Query:
+		// Query, Sort: LastName
 		Query<Customer> theQuery = 
-				currentSession.createQuery("from Customer", Customer.class);
+				currentSession.createQuery("from Customer order by lastName", Customer.class);
 		
 		// Execute Query and Get Results
 		List<Customer> customers = theQuery.getResultList();
 		
 		// Return Results:		
 		return customers;
+	}
+	
+	//*** SAVE new Customer ***
+	@Override
+	public void saveCustomer(Customer theCustomer) {
+		// Session:
+		Session currentSession = sessionFactory.getCurrentSession();
+		// SAVE Customer:
+		currentSession.save(theCustomer);
+		
 	}
 
 }
