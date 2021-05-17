@@ -26,6 +26,9 @@
 			<h3>Save Customer</h3>
 			
 			<form:form action="saveCustomer" modelAttribute="customer" method="POST">
+			 <!-- Associate "customer" data with ID (When calling SETTERS will call the SetID()) -->
+			 <form:hidden path="id" />
+			
 				<table>
 					<tbody>
 						<tr>
